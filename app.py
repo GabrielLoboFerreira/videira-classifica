@@ -13,7 +13,8 @@ import plotly.express as px
 
 @st.cache_resource
 def carrega_modelo():
-    url = 'https://drive.google.com/uc?id=1VPpwl8cagLfP8j6smglsCrarV0l82Jkh'
+    #https://drive.google.com/file/d/125j2OXSG9w3vWoNMeCbYx1XG4JfP0mbH/view?usp=drive_link
+    url = 'https://drive.google.com/uc?id=125j2OXSG9w3vWoNMeCbYx1XG4JfP0mbH'
     
     gdown.download(url,'modelo_quantizado16bits.tflite')
     interpreter = tf.lite.Interpreter(model_path='modelo_quantizado16bits.tflite')
